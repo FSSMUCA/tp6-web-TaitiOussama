@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini-calculatrice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mini-calculatrice</h1>
+    <p>Interface HTML/CSS/JS responsive</p>
+  </header>
+
+  <main>
+    <section class="calculator">
+      <form id="calcForm" novalidate>
+        <div class="row">
+          <label for="a">Nombre A</label>
+          <input id="a" name="a" type="number" step="any" />
+        </div>
+
+        <div class="row">
+          <label for="b">Nombre B</label>
+          <input id="b" name="b" type="number" step="any" />
+        </div>
+
+        <div class="row">
+          <label for="op">Opération</label>
+          <select id="op" name="op">
+            <option value="+">+</option>
+            <option value="-">−</option>
+            <option value="*">×</option>
+            <option value="/">÷</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button id="calcBtn" type="submit">Calculer</button>
+          <button id="clearBtn" type="button">Effacer</button>
+        </div>
+
+        <div id="errors" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="history">
+      <h2>Historique des opérations</h2>
+      <div id="historyCard" class="card">
+        <ul id="historyList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>TP6 — Mini-application web</p>
+    <p><a href="info.php">Voir info.php (exemples PHP)</a></p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
